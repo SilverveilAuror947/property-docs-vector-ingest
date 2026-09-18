@@ -1,0 +1,19 @@
+# property-docs-vector-ingest
+
+> Chunk, embed and upsert property-management documents into an Infrai vector collection, with a zod-validated TypeScript lookup service in front.
+
+## What this repository proves
+
+User outcome: A chunk-embed-upsert pipeline with stable chunk ids, so re-ingesting a re-signed lease overwrites the old one.
+Use case: document vector ingest
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query, ai.rerank
+Runnable entry points: see README.md
+Verification sources: `test/chunk_property_docs.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

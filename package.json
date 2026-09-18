@@ -1,0 +1,20 @@
+{
+  "name": "property-docs-vector-ingest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "ingest": "node --experimental-strip-types src/ingest_property_docs.ts",
+    "serve": "node --experimental-strip-types src/lookup_service.ts"
+  },
+  "dependencies": {
+    "openai": "^4.68.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  }
+}
